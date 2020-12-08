@@ -1,0 +1,257 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+}
+body{
+   height: 100vh;
+   width: 100vw;
+   display: grid ;
+   grid-template-columns: 20% 20% 20% 20% 20%;
+   grid-template-rows:20% 20% 20% 20% 20% ;
+   background:linear-gradient(90deg, #e0eafc 0%,#cfdef3 100% );
+   font-family: 'Do Hyeon', sans-serif;
+}
+header{
+    grid-column: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 3rem;
+    border: #4a728b 8px double;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #fff;
+}
+header:hover{
+    transform: scale(1.1);
+    background:linear-gradient(90deg, #c9d6ff 0%,#e2e2e2 100% );  
+    border: #fff 8px double;
+    color: #fff;
+}
+.head{
+    padding: 0px 10px;
+    color: #4a728b;
+    
+}
+
+#player{
+    grid-row-start: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+}
+#computer, #player{
+    color: #4a728b; 
+    padding: 1rem;
+    height: 3rem;
+    border: #4a728b 8px double;
+    border-radius: 5px; 
+    background-color: #fff;
+}
+#computer{
+    grid-column: 5/6  ;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+.computer-score span{
+  display: inline-block;
+  padding-left: 0.2rem;
+   
+}
+.player-score span{
+    padding-right: 0.2rem;
+}
+.player-score{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+   
+
+}    
+.computer-score{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+
+}
+.playerchoices{
+    grid-column: 2/5;
+    grid-row: 4/6;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3% ;
+    grid-template-rows: 50% 50%;  
+}
+img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem #aaadb3;
+    border-radius: 50%;
+}
+img{
+    width: 100px;
+    height: 100px;
+  
+}
+#r{
+    grid-column-start: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background: none;
+}
+#p{
+    grid-column-start: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background: none;
+}
+#s{
+    grid-column: 2/3;
+    grid-row: 2/3;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background: none; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{ 
+  background-color: #77afbe;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.head{
+    padding-left: 1rem;
+    color: white;
+}
+
+
+
+#player{
+   position: relative;
+  
+}
+#computer{
+    position: relative; 
+} 
+.btns{
+ 
+height: 6rem;
+width:6rem;
+fill: red;
+margin: 3rem;
+border: none;
+background-color:white; 
+}
+.btns:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem #aaadb3;
+    border-radius: 50%;
+    } */
+
+
+
+
+
+
+/* * {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #77afbe;
+}
+
+ div{
+    
+    
+     display: flex ;
+     justify-content: center;
+     align-items: flex-end;
+     
+ }
+ .btns{
+   
+    background-color: #77afbe;
+     height: 6rem;
+     width:6rem;
+     
+     margin: 3rem;
+     align-self: flex-end;
+     border: none;
+     background-color:none; 
+    
+ }
+ .btns:hover{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #1f53a1;
+    border-radius: 50%;
+
+ }
+.rock{
+
+}
+.paper{
+  
+
+}
+.scissors{
+
+}
+ */
