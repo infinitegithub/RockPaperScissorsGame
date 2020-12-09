@@ -1,5 +1,6 @@
 let playerchoice = document.querySelector('.playerchoices')
 let playerChoice;
+
     
 playerchoice.addEventListener('click', (e) => {
        playerChoice = e.target.alt;         
@@ -8,40 +9,56 @@ playerchoice.addEventListener('click', (e) => {
 })
 
 let choices = ["rock", "paper", "scissors"];
-// number of rounds the computer won
 
 function getComputerChoice(){
-    let randComChoice = choices[Math.floor( Math.random()* choices.length)];
-    return randComChoice;
+    let randomChoice = choices[Math.floor( Math.random()* choices.length)];
+     console.log(randomChoice);
+    return randomChoice;
 }
+ function displaypcchoice(){
+    let pcmove = document.querySelector('#'+getComputerChoice())
+    console.log(pcmove);
+    pcmove.style.cssText = "display: flex;"
+ }
+ let computerscore = 0; 
+    let playerscore = 0;
 function playRound(){
-          let computerscore = 0; 
-          let playerscore = 0;
-          let computerplay = getComputerChoice();
-        console.log(computerplay);
-        
+    const winmsg =document.querySelector('.winmsg');
+    displaypcchoice();
+    
+    let computerplay = getComputerChoice();     
      if (computerplay == playerChoice){
-             alert(" it's a draw!!!");
+        winmsg.textContent=" it's a draw!!!";
     }  else  if ( computerplay == choices[0] && playerChoice == choices[1]){
-             alert("you have Won! Paper beats Rock!  ")
-            // adding 1 to the score if the condition is met
-            //the same goes for computerscore it gets incremented by 1 each time the condition is met
+                 winmsg.textContent="you have Won! Paper beats Rock!  "
+           
              playerscore += 1;
-     }  else  if ( computerplay == choices[1] && playerChoice == choices[2 ]){
-             alert("you won! Scissors cut Paper")
+    }   else  if ( computerplay == choices[1] && playerChoice == choices[0]){
+        winmsg.textContent="you have lost! Paper beats Rock!  "
+  
+            computerscore+= 1;
+   } else  if ( computerplay == choices[1] && playerChoice == choices[2 ]){
+                  winmsg.textContent="you won! Scissors cut Paper"
+                  playerscore += 1;
+     }  else  if ( computerplay == choices[2] && playerChoice == choices[1]){
+        winmsg.textContent="you lost! Scissors cut Paper"
+        computerscore += 1;
+} else  if ( computerplay == choices[2] && playerChoice == choices[0]){
+        winmsg.textContent="you have  won! Rock beats Scissors! "
              playerscore += 1;
-     }  else  if ( computerplay == choices[2] && playerChoice == choices[0]){
-             alert("you have  won! Rock beats Scissors! ")
-             playerscore += 1;
-    }  else {
-             alert("You Lose!")
-             computerscore += 1;
-    }
-         console.log("the score of the player is "+playerscore);
-         console.log("the score of the computer is "+computerscore);
+    }  else  if ( computerplay == choices[0] && playerChoice == choices[2]){
+        winmsg.textContent="you have  lost! Rock beats Scissors! "
+            computerscore += 1;
+    } 
+    
+    let pcscore = document.querySelector('.computer-score');
+
+         pcscore.textContent= " "+ computerscore;
+
+    let plyerscore = document.querySelector('.player-score');
+         
+        plyerscore.textContent= " "+ playerscore;
 }
-
-
 
 
 
