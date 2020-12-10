@@ -1,33 +1,35 @@
-let playerchoice = document.querySelector('.playerchoices')
-let playerChoice;
-
-    
-playerchoice.addEventListener('click', (e) => {
-       playerChoice = e.target.alt;         
-       
-       playRound()
-})
-
 let choices = ["rock", "paper", "scissors"];
+let computerplay;
 
+const playerchoice = document.querySelector('.playerchoices')   
+ playerchoice.addEventListener('click', (e) => {
+       playerChoice = e.target.alt;         
+      // console.log(e.target.alt);
+        computerplay = getComputerChoice();  
+       playRound();
+})
 function getComputerChoice(){
     let randomChoice = choices[Math.floor( Math.random()* choices.length)];
-     console.log(randomChoice);
+     //console.log(randomChoice);
     return randomChoice;
 }
+
  function displaypcchoice(){
-    let pcmove = document.querySelector('#'+getComputerChoice())
-    console.log(pcmove);
-    pcmove.style.cssText = "display: flex;"
+    let pcmove = document.querySelector('#'+computerplay);
+    pcmove.style.cssText = 'display: flex; justify-content: center; align-content: center; align-items: center;'
+
+    setTimeout(() => {pcmove.style.cssText = "display: none;"
+        
+    }, 2000);
  }
  let computerscore = 0; 
-    let playerscore = 0;
+ let playerscore = 0;
+
 function playRound(){
+   
     const winmsg =document.querySelector('.winmsg');
-    displaypcchoice();
-    
-    let computerplay = getComputerChoice();     
-     if (computerplay == playerChoice){
+       displaypcchoice();   
+     if (computerplay === playerChoice){
         winmsg.textContent=" it's a draw!!!";
     }  else  if ( computerplay == choices[0] && playerChoice == choices[1]){
                  winmsg.textContent="you have Won! Paper beats Rock!  "

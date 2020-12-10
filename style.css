@@ -45,24 +45,18 @@ header:hover{
 }
 #rock {
     grid-area: 2/3/3/4;
-    display: none;
-    justify-content: center;
-    align-items: center;
+    display: none; 
     transform: rotate(180deg);
     
 }
 #paper{
     grid-area: 2/3/3/4;
     display: none;
-    justify-content: center;
-    align-items: center;
     transform: rotate(180deg);
 }
 #scissors{
     grid-area: 2/3/3/4;
     display: none;
-    justify-content: center;
-    align-items: center;
     transform: rotate(180deg);
 }
 
@@ -137,8 +131,8 @@ img:hover{
     border-radius: 50%;
 }
 img{
-    width: 120px;
-    height: 120px;
+    width: 116px;
+    height: 116px;
   
 }
 #r{
