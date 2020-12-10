@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    font-family: 'Orbitron', sans-serif;
 }
 body{
    height: 100vh;
@@ -43,22 +43,11 @@ header:hover{
   .head div:hover{
     color: #fff;
 }
-#rock {
-    grid-area: 2/3/3/4;
+
+ #rock, #paper, #scissors {
+   
     display: none; 
-    transform: rotate(180deg);
-    
-}
-#paper{
-    grid-area: 2/3/3/4;
-    display: none;
-    transform: rotate(180deg);
-}
-#scissors{
-    grid-area: 2/3/3/4;
-    display: none;
-    transform: rotate(180deg);
-}
+ }
 
 .winmsg{
     grid-area: 3/2/4/5;
@@ -133,21 +122,20 @@ img:hover{
 img{
     width: 116px;
     height: 116px;
-  
+    background: none;
+    
 }
 #r{
     grid-column-start: 1;
     display: flex;
     justify-content: center;
     align-items: center;  
-    background: none;
 }
 #p{
     grid-column-start: 3;
     display: flex;
     justify-content: center;
     align-items: center;  
-    background: none;
 }
 #s{
     grid-column: 2/3;
@@ -155,7 +143,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;  
-    background: none; 
 }
 
 

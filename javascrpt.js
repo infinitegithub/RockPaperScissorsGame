@@ -16,7 +16,7 @@ function getComputerChoice(){
 
  function displaypcchoice(){
     let pcmove = document.querySelector('#'+computerplay);
-    pcmove.style.cssText = 'display: flex; justify-content: center; align-content: center; align-items: center;'
+    pcmove.setAttribute('style', 'display: flex;grid-column:3/4;margin:auto; grid-row:2/3;transform: rotate(180deg); justify-content: center; align-items: center');
 
     setTimeout(() => {pcmove.style.cssText = "display: none;"
         
