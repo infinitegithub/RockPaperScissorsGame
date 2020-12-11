@@ -146,8 +146,20 @@ img{
 @media only screen and (max-width: 600px) {
     #computer, #player {
       font-size: 10px;
+      
       }
+#player{
+    padding-right: 20%;
+}
   }
-
-
+a{
+    grid-area: 5/5/6/6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#github{
+    width: 43px;
+    height: 43px;
+}
 
