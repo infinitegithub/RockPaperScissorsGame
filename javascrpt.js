@@ -13,11 +13,10 @@ function getComputerChoice(){
      //console.log(randomChoice);
     return randomChoice;
 }
-
  function displaypcchoice(){
     let pcmove = document.querySelector('#'+computerplay);
     pcmove.setAttribute('style', 'display: flex;grid-column:3/4;margin:auto; grid-row:2/3;transform: rotate(180deg); justify-content: center; align-items: center');
-
+    
     setTimeout(() => {pcmove.style.cssText = "display: none;"
         
     }, 2000);
@@ -61,58 +60,3 @@ function playRound(){
          
         plyerscore.textContent= " "+ playerscore;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
- /*(){
-     let anothergame = confirm("Would you like to play an other game?");
-     if (anothergame == true){
-         playRound();
-     }
- } */
