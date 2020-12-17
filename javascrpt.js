@@ -33,23 +33,23 @@ function playRound(){
     }  else  if ( computerplay == choices[0] && playerChoice == choices[1]){
                  winmsg.textContent="you have Won! Paper beats Rock!  "
            
-             playerscore += 1;
+             playerscore++;
     }   else  if ( computerplay == choices[1] && playerChoice == choices[0]){
         winmsg.textContent="you have lost! Paper beats Rock!  "
   
-            computerscore+= 1;
+            computerscore++;
    } else  if ( computerplay == choices[1] && playerChoice == choices[2 ]){
                   winmsg.textContent="you won! Scissors cut Paper"
-                  playerscore += 1;
+                  playerscore++;
      }  else  if ( computerplay == choices[2] && playerChoice == choices[1]){
         winmsg.textContent="you lost! Scissors cut Paper"
-        computerscore += 1;
+        computerscore++;
 } else  if ( computerplay == choices[2] && playerChoice == choices[0]){
         winmsg.textContent="you have  won! Rock beats Scissors! "
-             playerscore += 1;
+             playerscore++;
     }  else  if ( computerplay == choices[0] && playerChoice == choices[2]){
         winmsg.textContent="you have  lost! Rock beats Scissors! "
-            computerscore += 1;
+            computerscore++;
     } 
     
     let pcscore = document.querySelector('.computer-score');

@@ -10,8 +10,8 @@ html, body{
    height: 100vh;
    width: 100vw;
    display: grid ;
-   grid-template-columns: 20% 20% 20% 20% 20%;
-   grid-template-rows:20% 20% 20% 20% 20% ;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows:1fr 1fr 1fr 1fr 1fr ;
    background:linear-gradient(90deg, #e0eafc 0%,#cfdef3 100% );
    font-weight: 800;
 }
